@@ -1,0 +1,214 @@
+@font-face {
+  font-family: afacad;
+  src: url("../assets/fonts/Afacad-Regular.ttf");
+}
+
+@font-face {
+  font-family: alice;
+  src: url("../assets/fonts/Alice-Regular.ttf");
+}
+
+@font-face {
+  font-family: lancelot;
+  src: url("../assets/fonts/Lancelot-Regular.ttf");
+}
+
+body {
+  background:
+    url("../assets/vine_v5.png"), linear-gradient(to bottom, #570000, #b37267);
+  background-position:
+    -100px -100px,
+    center center;
+  background-repeat: repeat, no-repeat;
+  background-attachment: fixed, fixed;
+  background-size:
+    500px auto,
+    cover;
+  background-blend-mode: color-burn, normal;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+
+h1 {
+  font-family: afacad;
+  text-align: center;
+}
+
+.container {
+  min-height: 100vh;
+  min-width: 90%;
+  width: 90%;
+  background: linear-gradient(to bottom, #000000, #540000);
+  background-attachment: fixed;
+  background-repeat: repeat;
+  border-left: 5px rgba(0, 0, 0, 0.496) solid;
+  border-right: 5px rgba(0, 0, 0, 0.478) solid;
+}
+
+.game-title {
+  width: 600px;
+}
+
+.navbar {
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    #570000 25%,
+    #570000 75%,
+    transparent 100%
+  );
+}
+
+.navbar-nav {
+  justify-content: center !important;
+  text-align: center;
+}
+
+.navbar-title {
+  color: #ffdeb1;
+  font-family: lancelot;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.nav-bar-btn {
+  background: linear-gradient(to bottom, #000000, #761f1f);
+  color: #ffdeb1;
+  border: #d8c7af 2px solid;
+  padding: 5px !important;
+  margin: 5px 5px 5px 5px;
+  font-family: lancelot;
+  font-size: 20px;
+  text-align: center;
+  min-width: 150px;
+  text-decoration: none;
+  border-radius: 25px;
+}
+
+.nav-bar-btn:hover {
+  background: linear-gradient(to bottom, #000000, #000000);
+}
+
+.navigation-button {
+  width: 80%;
+  text-align: center;
+  cursor: pointer;
+  color: #ffdeb1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+.navigation-button .navbar-title:hover {
+  color: #c6a87d;
+  transition: 0.2s ease-in-out;
+}
+
+.itch-link {
+  color: #ffdeb1;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: lancelot;
+  font-size: 18px;
+  text-align: end;
+  width: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.itch-link:hover {
+  transition: 0.2s ease-in-out;
+  color: #fa5c5c;
+}
+
+.game-wrapper {
+  width: 65%;
+  border: 5px solid #000000;
+  border-radius: 10px;
+  background-color: #000000;
+  padding: 0px;
+}
+
+.divider-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.divider {
+  width: 350px;
+}
+
+#game-container {
+  position: relative;
+}
+
+.load-game-btn {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to bottom, #000000, #761f1f);
+  color: #ffdeb1;
+  border: #d8c7af 2px solid;
+  border-radius: 25px;
+  padding: 5px 10px;
+  font-family: lancelot;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  width: 50%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.load-game-btn i {
+  font-size: 12px;
+}
+
+.load-game-btn:hover {
+  background: linear-gradient(to bottom, #000000, #000000);
+}
+
+/*---------------------------- responsiveness -----------------------------*/
+
+@media only screen and (max-width: 992px) {
+  .itch-link {
+    width: 90%;
+  }
+
+  .game-wrapper {
+    width: 90%;
+  }
+
+  .nav-bar-btn {
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      black 25%,
+      black 75%,
+      transparent 100%
+    );
+    border: none;
+  }
+
+  .nav-bar-btn:hover {
+    color: #c6a87d;
+    transition: 0.2s ease-in-out;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .divider {
+    width: 200px;
+  }
+
+  .load-game-btn {
+    top: 50%;
+    width: 75%;
+  }
+}

@@ -1,0 +1,31 @@
+/*---------------------------- Scrollbar -----------------------------*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    45deg,
+    #000000 0%,
+    #761f1f 60%
+  );
+  width: 10px !important;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    45deg,
+    #000000 0%,
+    #3f0e0e 60%
+  );
+  cursor: pointer;
+}

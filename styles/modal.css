@@ -94,6 +94,110 @@
   background-color: black;
 }
 
+/*----------game modal-----------*/
+
+.game-modal-content {
+  background:
+    url("../assets/vine_v5.png"), linear-gradient(to bottom, #570000, #b37267);
+  background-position:
+    -70px -70px,
+    center center;
+  background-repeat: repeat, no-repeat;
+  background-attachment: scroll, scroll;
+  background-size:
+    700px auto,
+    cover;
+  background-blend-mode: color-burn, normal;
+  border: 3px solid #8e2323;
+}
+
+.modal-header {
+  border: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px;
+  position: relative;
+}
+
+.modal-body {
+  font-family: alice;
+  font-size: 16px;
+  color: white;
+}
+
+.modal-cross-2 {
+  font-size: 1.6rem;
+  color: #ee8371;
+  z-index: 1057;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.modal-cross-2:hover {
+  opacity: 1;
+}
+
+.modal-title {
+  font-family: lancelot;
+  font-size: 45px;
+  color: #ffeed7;
+  filter: drop-shadow(1px 1px 0px #8c6439) drop-shadow(-1px -1px 0px #8c6439)
+    drop-shadow(1px -1px 0px #8c6439) drop-shadow(-1px 1px 0px #8c6439);
+  display: flex;
+  align-items: center;
+}
+
+.modal-title i {
+  font-size: 30px;
+}
+
+.content-warning-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid #8c643979;
+  border-radius: 10px;
+  font-family: alice;
+  font-size: 16px;
+  color: #d8c7af;
+  line-height: 1.3;
+}
+
+.content-warning-box a {
+  text-decoration: none;
+  color: #fa5c5c;
+  font-weight: bold;
+}
+
+.content-warning-box a:hover {
+  text-decoration: dotted 2px #fa5c5c underline;
+}
+
+.modal-footer {
+  border: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.proceed-btn {
+  background: linear-gradient(to bottom, #000000, #761f1f);
+  color: #ffdeb1;
+  border: #d8c7af 2px solid;
+  border-radius: 25px;
+  padding: 5px 10px;
+  font-family: lancelot;
+  font-size: 20px;
+  cursor: pointer;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.proceed-btn i {
+    font-size: 12px;
+}
+
 @media only screen and (max-width: 1120px) {
   .modal-open {
     padding-right: 0px !important;

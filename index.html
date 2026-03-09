@@ -37,7 +37,7 @@
         <a
           class="itch-link"
           href="https://kanekos99.itch.io/how-not-to-kill-a-vampire-lord"
-          >Play on itch.io<i
+          >Download or play on itch.io<i
             class="fa fa-long-arrow-right ms-2"
             aria-hidden="true"
           ></i
@@ -45,7 +45,12 @@
         <div class="game-wrapper">
           <div class="ratio ratio-16x9" id="game-container">
             <img src="assets/game_menu.png" />
-            <button class="load-game-btn" onclick="loadGame()" id="load-btn">
+            <button
+              class="load-game-btn"
+              id="load-btn"
+              data-bs-toggle="modal"
+              data-bs-target="#gameModal"
+            >
               Load Game <i class="fa fa-play ms-2" aria-hidden="true"></i>
             </button>
           </div>
@@ -210,7 +215,87 @@
       id="gameModal"
       tabindex="-1"
       aria-labelledby="gameModalLabel"
-    ></div>
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content game-modal-content">
+          <div class="modal-header px-4 pt-2">
+            <h5 class="modal-title">
+              <i class="fa fa-exclamation-triangle me-2" aria-hidden="true"></i>
+              warning
+            </h5>
+            <i
+              class="fa fa-times modal-cross-2"
+              aria-hidden="true"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></i>
+          </div>
+          <div class="modal-body pt-2 px-4">
+            Please read all content warnings before proceeding:
+            <div class="mt-3 content-warning-box p-3">
+              <b>Recommended 16+ with some dark themes</b>
+              <br />
+              <br />
+              <ul>
+                <li>No explicit NSFW but suggestive undertones</li>
+                <li>Blood and violence</li>
+                <li>Suicide ideation</li>
+                <li>Consensual and non-consensual blood drinking</li>
+                <li>Implied abuse with possible sexual undertones</li>
+                <li>Some swearing</li>
+                <li>Power imbalance</li>
+                <li>
+                  Questionable/ problematic age gaps although everyone is of
+                  legal age as of present day in the game
+                  <details>
+                    <summary><i>Spoilers</i></summary>
+                    <i
+                      >Cyrus first meets Mikael when Mikael is still a child,
+                      but there is no romantic relationship between them until
+                      the events of the game.</i
+                    >
+                  </details>
+                </li>
+              </ul>
+            </div>
+            <br />
+            Additionally, please note the following:
+            <div class="mt-3 content-warning-box p-3">
+              <ul>
+                <li>
+                  Loading this game might use <b>a large amount of data</b>, so
+                  using Wi-Fi is recommended.
+                </li>
+                <li>
+                  While you can technically play this game on mobile,
+                  <b>it is not mobile friendly</b> and is prone to randomly
+                  crashing/ refreshing the mobile browser. Please save
+                  frequently.
+                </li>
+                <li>
+                  This game is best experienced downloaded on Windows, or in PC
+                  browser version on the
+                  <a
+                    href="https://kanekos99.itch.io/how-not-to-kill-a-vampire-lord"
+                    >itch.io site</a
+                  >.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-footer pb-3">
+            <button
+              class="proceed-btn px-5 py-2"
+              data-bs-dismiss="modal"
+              onclick="loadGame()"
+            >
+              I have read the warnings and would like to proceed.
+              <i class="fa fa-play ms-2" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Image Modal -->
     <div

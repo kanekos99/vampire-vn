@@ -85,7 +85,12 @@
                   onclick="jumpToSection('#about')"
                   >About</a
                 >
-                <a class="nav-bar-btn" href="#">Gallery</a>
+                <a
+                  class="nav-bar-btn"
+                  href="#gallery"
+                  onclick="jumpToSection('#gallery')"
+                  >Gallery</a
+                >
                 <a class="nav-bar-btn" href="#">Characters</a>
                 <a
                   class="nav-bar-btn"
@@ -105,13 +110,13 @@
         </nav>
       </div>
 
-      <div class="about-container pt-4 pb-5 active" id="about">
+      <div class="about-container pt-3 pb-5 active" id="about">
         <div
           class="d-flex justify-content-center align-items-center pt-1 flex-wrap gallery-container pb-3"
         >
           <div class="gallery-box profile-box relative-box">
             <div class="gallery-link">
-              <a
+              <a href="#gallery" onclick="jumpToSection('#gallery')"
                 >view full gallery
                 <i class="fa fa-caret-right ms-2" aria-hidden="true"></i
               ></a>
@@ -244,8 +249,8 @@
                   >
                   by Nikos Spiliotis (<a
                     href="https://www.youtube.com/@BreakingCopyright"
-                  ></a
-                  >BreakingCopyright)
+                    >BreakingCopyright</a
+                  >)
                 </li>
               </ul>
               <br />
@@ -328,6 +333,374 @@
                   process of the game, and some extra lore, including some
                   additional art.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-container pb-5" id="gallery" style="display: none">
+        <div class="row justify-content-center pt-3">
+          <div class="accordion">
+            <div class="accordion-item px-2">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#screenshots"
+                  aria-expanded="true"
+                  aria-controls="screenshots"
+                >
+                  <div class="gallery-title">game screenshots</div>
+                </button>
+              </h2>
+              <div
+                id="screenshots"
+                class="accordion-collapse collapse show pb-4"
+              >
+                <div class="accordion-body">
+                  <div
+                    class="d-flex justify-content-center align-items-end flex-wrap"
+                  >
+                    <img
+                      class="gallery-thumbnail-v2"
+                      src="./assets/screenshots/vampire_vn_screenshot_1.png"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                    <img
+                      class="gallery-thumbnail-v2"
+                      src="./assets/screenshots/vampire_vn_screenshot_2.png"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                    <img
+                      class="gallery-thumbnail-v2"
+                      src="./assets/screenshots/vampire_vn_screenshot_3.png"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                    <img
+                      class="gallery-thumbnail-v2"
+                      src="./assets/screenshots/vampire_vn_screenshot_4.png"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                    <img
+                      class="gallery-thumbnail-v2"
+                      src="./assets/screenshots/vampire_vn_screenshot_6.png"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                    <img
+                      class="gallery-thumbnail-v2"
+                      src="./assets/screenshots/vampire_vn_screenshot_7.png"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item px-2 pt-3">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#cgs"
+                  aria-expanded="true"
+                  aria-controls="screenshots"
+                >
+                  <div class="gallery-title">cg gallery</div>
+                </button>
+              </h2>
+              <div id="cgs" class="accordion-collapse collapse show pb-4">
+                <div class="accordion-body">
+                  <div
+                    class="d-flex justify-content-center align-items-end flex-wrap"
+                  >
+                    <img
+                      class="gallery-thumbnail-v2"
+                      src="./assets/cgs/game_menu.png"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                    <img
+                      class="gallery-thumbnail-v2"
+                      src="./assets/cgs/mirror_cg_fit.webp"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                    <img
+                      class="gallery-thumbnail-v2"
+                      src="./assets/cgs/cyrus_forest.webp"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                    <img
+                      class="gallery-thumbnail-v2"
+                      src="./assets/cgs/cyrus_forest_blood.webp"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                    <img
+                      class="gallery-thumbnail-v2"
+                      src="./assets/cgs/cyrus_forest_knife.webp"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                    <img
+                      class="gallery-thumbnail-v2"
+                      src="./assets/cgs/mikael_bed.webp"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                    <img
+                      class="gallery-thumbnail-v2"
+                      src="./assets/cgs/mikael_bed_speak.webp"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                    <img
+                      class="gallery-thumbnail-v2"
+                      src="./assets/cgs/mikael_sleep_dagger.webp"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                    <img
+                      class="gallery-thumbnail-v2"
+                      src="./assets/cgs/stab_cg.webp"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                    <img
+                      class="gallery-thumbnail-v2"
+                      src="./assets/cgs/stab_cg_2.webp"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                    <img
+                      class="gallery-thumbnail-v2"
+                      src="./assets/cgs/kiss_cg.webp"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                    <img
+                      class="gallery-thumbnail-v2"
+                      src="./assets/cgs/bad_blood_drinking_cg2.webp"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                    <img
+                      class="gallery-thumbnail-v2"
+                      src="./assets/cgs/good_bite_cg.webp"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                    <img
+                      class="gallery-thumbnail-v2"
+                      src="./assets/cgs/departure_cg.webp"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item px-2 pt-3">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#extras"
+                  aria-expanded="true"
+                  aria-controls="screenshots"
+                >
+                  <div class="gallery-title">extra art</div>
+                </button>
+              </h2>
+              <div id="extras" class="accordion-collapse collapse show pb-4">
+                <div class="accordion-body">
+                  <div
+                    class="d-flex justify-content-center align-items-end flex-wrap"
+                  >
+                    <img
+                      class="gallery-thumbnail-v2"
+                      src="./assets/extras/maid_page.webp"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                    <img
+                      class="gallery-thumbnail-v2"
+                      src="./assets/extras/cy_mom.webp"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                    <img
+                      class="gallery-thumbnail-v2"
+                      src="./assets/extras/dietrichs.webp"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item px-2 pt-3">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#npcs"
+                  aria-expanded="true"
+                  aria-controls="screenshots"
+                >
+                  <div class="gallery-title">npc gallery</div>
+                </button>
+              </h2>
+              <div id="npcs" class="accordion-collapse collapse show pb-4">
+                <div class="accordion-body">
+                  <div
+                    class="d-flex justify-content-center align-items-end flex-wrap"
+                  >
+                    <img
+                      class="gallery-thumbnail-v2 sprite-thumbnail"
+                      src="./assets/npcs/henri_default.webp"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                    <img
+                      class="gallery-thumbnail-v2 sprite-thumbnail"
+                      src="./assets/npcs/adelbert_normal.webp"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                    <img
+                      class="gallery-thumbnail-v2 sprite-thumbnail"
+                      src="./assets/npcs/doctor_normal.webp"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                    <img
+                      class="gallery-thumbnail-v2 sprite-thumbnail"
+                      src="./assets/npcs/tailor_normal.webp"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item px-2 pt-3">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#bats"
+                  aria-expanded="true"
+                  aria-controls="screenshots"
+                >
+                  <div class="gallery-title">chibi bats</div>
+                </button>
+              </h2>
+              <div id="bats" class="accordion-collapse collapse show pb-4">
+                <div class="accordion-body">
+                  <div
+                    class="d-flex justify-content-center align-items-end flex-wrap"
+                  >
+                    <img
+                      class="gallery-thumbnail-v2 sprite-thumbnail"
+                      src="./assets/bats/love.png"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                    <img
+                      class="gallery-thumbnail-v2 sprite-thumbnail"
+                      src="./assets/bats/homeless.png"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                    <img
+                      class="gallery-thumbnail-v2 sprite-thumbnail"
+                      src="./assets/bats/confuse.png"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                    <img
+                      class="gallery-thumbnail-v2 sprite-thumbnail"
+                      src="./assets/bats/hurt.png"
+                      loading="lazy"
+                      onclick="showImage(this)"
+                      data-bs-toggle="modal"
+                      data-bs-target="#galleryModal"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
 const modalImg = document.getElementById("modal-image");
-const sections = ["#about", "#credits", "#others"];
+const sections = ["#about", "#credits", "#others", "#gallery"];
 const home_section = document.querySelector("#about");
 
 const app = {
@@ -17,7 +17,13 @@ function loadGame() {
 }
 
 function showNextOrPrevImg(direction) {
-  const visibleImages = [...document.querySelectorAll(".gallery-thumbnail")];
+  const currentSection = window.location.hash;
+  let visibleImages = [];
+  if (currentSection == "#gallery") {
+    visibleImages = [...document.querySelectorAll(".gallery-thumbnail-v2")];
+  } else {
+    visibleImages = [...document.querySelectorAll(".gallery-thumbnail")];
+  }
   const currentSrc = modalImg.src;
 
   let currentIndex = visibleImages.findIndex((img) => img.src === currentSrc);
@@ -76,7 +82,9 @@ function backToHome() {
 function updateActiveBtn(sectionId) {
   const currentActiveBtn = document.querySelector(".active-btn");
   currentActiveBtn.classList.remove("active-btn");
-  const newActiveBtn = document.querySelector(`a[href="${sectionId}"]`);
+  const newActiveBtn = document.querySelector(
+    `.nav-bar-btn[href="${sectionId}"]`,
+  );
   newActiveBtn.classList.add("active-btn");
 }
 

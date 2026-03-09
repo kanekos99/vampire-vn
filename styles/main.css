@@ -278,6 +278,45 @@ ul {
   color: #fa5c5c;
 }
 
+.content-body a {
+  text-decoration: none;
+  color: #fa5c5c;
+  font-weight: bold;
+}
+
+.content-body a:hover {
+  text-decoration: dotted 2px #fa5c5c underline;
+}
+
+.content-body h2 {
+  font-size: 24px;
+}
+
+.paragraph-content {
+  text-align: justify;
+  width: 100%;
+}
+
+hr {
+  width: 100%;
+  border-top: 3px dotted #fa5c5c;
+  opacity: 30%;
+}
+
+.active-btn {
+  background: linear-gradient(to bottom, white, #ffdeb1);
+  border: 2px solid #b89c7c;
+  color: #000000b6;
+  font-weight: bold;
+}
+
+.active-btn:hover {
+  background: linear-gradient(to bottom, white, #ffdeb1);
+  border: 2px solid #b89c7c;
+  color: #000000b6;
+  font-weight: bold;
+}
+
 /*---------------------------- responsiveness -----------------------------*/
 
 @media only screen and (max-width: 1120px) {
@@ -321,6 +360,28 @@ ul {
     );
     color: black;
     transition: 0.2s ease-in-out;
+  }
+
+  .active-btn {
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      #c6a87d 25%,
+      #c6a87d 75%,
+      transparent 100%
+    );
+    color: #000000b6;
+  }
+
+  .active-btn:hover {
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      #c6a87d 25%,
+      #c6a87d 75%,
+      transparent 100%
+    );
+    color: #000000b6;
   }
 
   .about-container {
@@ -372,5 +433,9 @@ ul {
 
   .about-row {
     margin-top: 20px !important;
+  }
+
+  .content-body h2 {
+    font-size: 20px;
   }
 }

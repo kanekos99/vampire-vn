@@ -194,6 +194,10 @@
   justify-content: center;
 }
 
+.proceed-btn:hover {
+  background: black;
+}
+
 .proceed-btn i {
     font-size: 12px;
 }

@@ -369,4 +369,8 @@ ul {
     min-height: 200px;
     padding-bottom: 30px;
   }
+
+  .about-row {
+    margin-top: 20px !important;
+  }
 }

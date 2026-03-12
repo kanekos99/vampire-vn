@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="styles/main.css" />
     <link rel="stylesheet" type="text/css" href="styles/modal.css" />
     <link rel="stylesheet" type="text/css" href="styles/scrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="styles/animation.css" />
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -91,7 +92,12 @@
                   onclick="jumpToSection('#gallery')"
                   >Gallery</a
                 >
-                <a class="nav-bar-btn" href="#">Characters</a>
+                <a
+                  class="nav-bar-btn"
+                  href="#characters"
+                  onclick="jumpToSection('#characters')"
+                  >Characters</a
+                >
                 <a
                   class="nav-bar-btn"
                   href="#credits"
@@ -333,6 +339,95 @@
                   process of the game, and some extra lore and art.
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-container pb-5" id="characters" style="display: none">
+        <div class="chara-name" id="chara-name">Cyrus</div>
+        <div
+          class="d-flex flex-row flex-wrap justify-content-center chara-row"
+          id="chara-profile-container"
+        >
+          <div class="chara-box d-flex flex-row flex-wrap">
+            <div class="chara-nav pb-5">
+              <img
+                class="chara-icon active-icon"
+                id="cyrus_icon"
+                src="assets/cyrus_icon.png"
+                onclick="switchCharacter(0, 'cyrus_icon')"
+              />
+              <img
+                class="chara-icon"
+                id="mikael_icon"
+                src="assets/mikael_icon.png"
+                onclick="switchCharacter(1, 'mikael_icon')"
+              />
+            </div>
+            <div class="chara-image">
+              <img
+                class="chara-body"
+                src="assets/cyrus_default.png"
+                id="character-image"
+              />
+            </div>
+          </div>
+          <div class="chara-profile">
+            <div class="content-container profile-box px-4 pb-4">
+              <div class="content-title profile-box-title">profile</div>
+              <div class="content-text">
+                <div id="chara-profile-text">
+                  The responsible head butler of the Dietrich household.
+                  <br /><br />He is a former human turned into a vampire by the
+                  previous lord of the Dietrich family, and is thus bound to
+                  serve them for the rest of his immortal life.
+                </div>
+                <hr class="profile-divider" />
+                <div class="pref-box">
+                  <div class="pref-row">
+                    <label>likes</label>
+                    <p class="pref-text" id="likes">
+                      Peace and quiet, sweet treats
+                    </p>
+                  </div>
+                  <div class="pref-row">
+                    <label>dislikes</label>
+                    <p class="pref-text" id="dislikes">
+                      Irresponsible individuals
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content-container profile-box mt-4 px-4 pb-4">
+              <div class="content-title profile-box-title">story</div>
+              <div class="content-text story-text" id="story-text">
+                coming soon!
+              </div>
+            </div>
+            <div class="divider-wrapper mt-3">
+              <img src="assets/divider.png" class="divider-2" />
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item sprite-gallery px-2">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button sprite-gallery-btn"
+              aria-expanded="true"
+            >
+              <div class="gallery-title chara-gallery-title">
+                sprite gallery
+              </div>
+            </button>
+          </h2>
+          <div class="accordion-collapse collapse show pb-4">
+            <div class="accordion-body">
+              <div
+                class="d-flex justify-content-center align-items-end flex-wrap"
+                id="chara-sprite-gallery"
+              ></div>
             </div>
           </div>
         </div>
@@ -833,6 +928,7 @@
       </div>
     </div>
 
+    <script src="scripts/characters.js"></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>

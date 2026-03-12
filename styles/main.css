@@ -148,6 +148,10 @@ h1 {
   width: 350px;
 }
 
+.divider-2 {
+  width: 250px;
+}
+
 #game-container {
   position: relative;
 }
@@ -366,6 +370,24 @@ hr {
   transform: scale(1.05);
 }
 
+.chara-thumbnail {
+  display: block;
+  object-fit: cover;
+  object-position: 15% 8%;
+  margin: 2px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  background-color: #1a1a304b;
+  border: 3px solid #b89c7c;
+  border-radius: 5px;
+  width: 10rem;
+  height: 10rem;
+}
+
+.chara-thumbnail:hover {
+  transform: scale(1.05);
+}
+
 .accordion {
   width: 100%;
 }
@@ -398,6 +420,150 @@ hr {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M2 5l6 6 6-6' fill='none' stroke='%23ffffff40' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>") !important;
 }
 
+.chara-nav {
+  border-right: 3px solid #b89c7c52;
+  margin-top: 30px;
+  margin-right: 10px;
+  max-height: 300px;
+  z-index: 1;
+}
+
+.chara-box {
+  z-index: 1;
+}
+
+.chara-icon {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  object-position: 50% 8%;
+  display: block;
+  cursor: pointer;
+  border: 3px solid #e7c6a0;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  opacity: 50%;
+}
+
+.chara-icon:hover {
+  opacity: 100%;
+  transform: scale(1.05);
+  transition: ease-in-out 0.2s;
+}
+
+.active-icon {
+  opacity: 100%;
+}
+
+.chara-name {
+  font-family: lancelot;
+  font-size: 3.5rem;
+  color: #ffeed7;
+  filter: drop-shadow(1px 1px 0px #8c6439) drop-shadow(-1px -1px 0px #8c6439)
+    drop-shadow(1px -1px 0px #8c6439) drop-shadow(-1px 1px 0px #8c6439);
+  padding-top: 30px;
+}
+
+.chara-body {
+  height: 800px;
+}
+
+.chara-row {
+  position: relative;
+}
+
+.chara-row::before {
+  content: "";
+  position: absolute;
+  background-image: var(--row-bg, url(../assets/cyrus_bedroom_v2.png));
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  pointer-events: none;
+  width: 128%;
+  height: 600px;
+  top: 10%;
+  z-index: 0;
+  opacity: 25%;
+}
+
+.chara-profile {
+  width: 45%;
+  margin-top: 15%;
+}
+
+.profile-box-title {
+  font-size: 2rem;
+  top: -25px;
+}
+
+.profile-box {
+  height: fit-content;
+  font-size: 0.9rem;
+  text-align: center;
+  padding-top: 30px;
+  font-family: alice;
+}
+
+.story-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 50px;
+  margin: auto;
+}
+
+.profile-divider {
+  border: 1px solid #e7be8f;
+  width: 50%;
+  margin: 20px auto 16px auto;
+}
+
+.pref-box {
+  margin: auto;
+}
+
+.pref-row {
+  display: flex;
+}
+
+.pref-row label {
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    #7a2c27 25%,
+    #7a2c27 75%,
+    transparent 100%
+  );
+  padding: 5px 10px;
+  width: 100px;
+  text-align: center;
+  font-family: lancelot;
+  font-size: 1.2rem;
+  margin: 5px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pref-text {
+  margin: 5px 0px;
+  padding: 10px 10px;
+}
+
+.chara-gallery-title {
+  font-size: 2rem;
+}
+
+.sprite-gallery {
+  border: none;
+}
+
+.sprite-gallery-btn {
+  cursor: default !important;
+}
+
 /*---------------------------- responsiveness -----------------------------*/
 
 @media only screen and (max-width: 1120px) {
@@ -408,6 +574,11 @@ hr {
 
   .about-container {
     width: 80%;
+  }
+
+  .chara-profile {
+    width: 100%;
+    margin-top: 20px;
   }
 }
 
@@ -480,6 +651,15 @@ hr {
   .content-row {
     padding-top: 0px;
   }
+
+  .chara-name {
+    padding-top: 0px;
+  }
+
+  .chara-row::before {
+    width: 115%;
+    height: 550px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -534,5 +714,55 @@ hr {
   .gallery-thumbnail-v2 {
     height: 8rem;
     width: 8rem;
+  }
+
+  .chara-body {
+    height: 500px;
+  }
+
+  .chara-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .chara-name {
+    font-size: 2.5rem;
+  }
+
+  .chara-row::before {
+    width: 110%;
+    top: 5%;
+    height: 400px;
+  }
+
+  .chara-nav {
+    max-height: 150px;
+  }
+
+  .chara-gallery-title {
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+
+  .chara-thumbnail {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .chara-body {
+    height: 400px;
+  }
+
+  .chara-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .chara-row::before {
+    width: 115%;
+    top: 2%;
+    height: 300px;
   }
 }

@@ -13,6 +13,7 @@
   cursor: pointer;
   color: white;
   font-size: 30px;
+  background-color: rgba(0, 0, 0, 0.70);
 }
 
 .modal.show {
@@ -199,10 +200,16 @@
 }
 
 .proceed-btn i {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 @media only screen and (max-width: 1120px) {
+  .modal-open {
+    padding-right: 10px !important;
+  }
+}
+
+@media (max-width: 992px) {
   .modal-open {
     padding-right: 0px !important;
   }

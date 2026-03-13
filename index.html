@@ -29,8 +29,20 @@
     <link rel="icon" type="image/x-icon" href="./assets/icon.png" />
   </head>
   <body>
-    <div class="container justify-content-center">
-      <div class="row justify-content-center pt-5">
+    <div class="container justify-content-center" id="body-container">
+      <div
+        class="to-top-btn"
+        onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      >
+        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+      </div>
+      <div class="pt-3 px-2">
+        <a class="back-link" href="https://kanekos.neocities.org/"
+          ><i class="fa fa-caret-left me-2" aria-hidden="true"></i>back to
+          home</a
+        >
+      </div>
+      <div class="row justify-content-center pt-4">
         <img src="./assets/game_title.png" class="game-title" />
       </div>
 
@@ -400,12 +412,12 @@
                 </div>
               </div>
             </div>
-            <div class="content-container profile-box mt-4 px-4 pb-4">
+            <!-- <div class="content-container profile-box mt-4 px-4 pb-4">
               <div class="content-title profile-box-title">story</div>
               <div class="content-text story-text" id="story-text">
                 coming soon!
               </div>
-            </div>
+            </div> -->
             <div class="divider-wrapper mt-3">
               <img src="assets/divider.png" class="divider-2" />
             </div>
@@ -525,7 +537,22 @@
               <div id="cgs" class="accordion-collapse collapse show pb-4">
                 <div class="accordion-body">
                   <div
-                    class="d-flex justify-content-center align-items-end flex-wrap"
+                    class="content-container px-5 py-5 justify-content-center align-items-center flex-wrap spoiler-warning"
+                    id="spoiler-warning"
+                  >
+                    <b class="me-1">Warning:</b>This section contains spoilers!
+                    <button
+                      class="proceed-btn px-5 py-2 mt-3 spoiler-proceed-btn"
+                      onclick="showCGImages()"
+                    >
+                      View
+                      <i class="fa fa-play ms-2" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <div
+                    class="flex-row justify-content-center align-items-end flex-wrap"
+                    id="cg-images"
+                    style="display: none"
                   >
                     <img
                       class="gallery-thumbnail-v2"
@@ -866,8 +893,8 @@
                   frequently.
                 </li>
                 <li>
-                  This game is best experienced downloaded on Windows, or in the PC
-                  browser version on the
+                  This game is best experienced downloaded on Windows, or in the
+                  PC browser version on the
                   <a
                     href="https://kanekos99.itch.io/how-not-to-kill-a-vampire-lord"
                     >itch.io site</a

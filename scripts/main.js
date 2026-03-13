@@ -120,6 +120,18 @@ window.addEventListener("DOMContentLoaded", () => {
   handleHashChange(currentHash);
 });
 
+function showCGImages() {
+  const spoilerWarning = document.getElementById("spoiler-warning");
+  const cgImages = document.getElementById("cg-images");
+
+  spoilerWarning.classList.add("fade-out-bottom");
+  setTimeout(() => {
+    spoilerWarning.style.display = "none";
+    cgImages.style.display = "flex";
+    cgImages.classList.add("fade-in-bottom");
+  }, 200);
+}
+
 /*-------------------- character switching handling -----------------------*/
 
 // function switchCharacter(id, iconName) {
@@ -154,7 +166,7 @@ function switchCharacter(id, iconName) {
       chara_profile_text.innerHTML = selectedCharacter.profileText;
       chara_likes.innerHTML = selectedCharacter.likes;
       chara_dislikes.innerHTML = selectedCharacter.dislikes;
-      chara_story.innerHTML = selectedCharacter.story;
+      // chara_story.innerHTML = selectedCharacter.story;
       chara_image.src = selectedCharacter.defaultImage;
       loadCharaImages();
 
